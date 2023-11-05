@@ -1,6 +1,6 @@
 numpy
 pandas
-tensorflow
+tensorflow-cpu
 flask
 keras_preprocessing
 gunicorn==19.7.1
