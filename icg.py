@@ -1,6 +1,8 @@
 import pickle
 import numpy as np
 import pandas as pd
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
