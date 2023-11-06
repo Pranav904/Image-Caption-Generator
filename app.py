@@ -12,7 +12,7 @@ if not os.path.exists(upload_folder):
     os.makedirs(upload_folder)
 
 def del_file(path):
-    sleep(15)
+    sleep(90)
     os.remove(path)
 
 
@@ -34,4 +34,4 @@ def upload_file():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=8080)
