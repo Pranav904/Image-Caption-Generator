@@ -7,7 +7,7 @@ from icg import *
 
 app = Flask(__name__)
 
-upload_folder = 'static\\upload'
+upload_folder = 'static/upload'
 if not os.path.exists(upload_folder):
     os.makedirs(upload_folder)
 
@@ -22,7 +22,7 @@ def upload_file():
         file = request.files['img']
         filename = secure_filename(file.filename)
         img = os.path.join(upload_folder, filename)
-        if(img == 'static\\upload\\'):
+        if(img == 'static/upload/'):
             return render_template('index.html',vimg = False)
         file.save(img)
         caption = predict_caption(caption_model, tokenizer, max_length, feature_extract(img))
